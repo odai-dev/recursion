@@ -11,9 +11,12 @@ console.log(fibbonacciSeq);
 
 
 function fibsRec(n, arr = []) {
-    if(n == 2) {
-        arr.push(0, 1);
+    if(n == 1) {
+        arr.push(0);
         return arr;
+    } else if(n == 2) {
+        arr.push(0,1)
+        return arr
     }
     const sequence = fibsRec(n-1);
     sequence.push(sequence[sequence.length-2]+sequence[sequence.length-1]);
